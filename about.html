@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - MCS Cooperative Society</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navigation Container -->
+    <div id="navbar-container"></div>
+
+    <!-- Page Header -->
+    <header class="page-header bg-light py-5 mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <h1 class="display-4 fw-bold text-primary">About MCS</h1>
+                    <p class="lead">Building Financial Legacy, Creating Generational Wealth</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section class="about-section py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 fade-in">
+                    <h2 class="mb-4">Our Story</h2>
+                    <p class="lead">MCS is a multipurpose cooperative Society dedicated to building financial legacy and creating generational wealth for our members.</p>
+                    <p>Founded with the vision of empowering individuals and families through collective financial strength, we have grown into a trusted institution that provides comprehensive financial solutions to our community.</p>
+                    <p>Our commitment to excellence, transparency, and member satisfaction has made us a leading cooperative society in the region.</p>
+                </div>
+                <div class="col-lg-6 fade-in">
+                    <img src="images/about-hero.jpg" alt="MCS Office" class="img-fluid rounded shadow">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission & Vision -->
+    <section class="mission-vision py-5 bg-light">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-6 fade-in">
+                    <div class="card h-100">
+                        <div class="card-body text-center">
+                            <i class="fas fa-bullseye fa-3x mb-3 text-primary"></i>
+                            <h3>Our Mission</h3>
+                            <p>To provide accessible financial solutions and create opportunities for wealth creation through cooperative principles, fostering economic growth and financial security for our members.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 fade-in">
+                    <div class="card h-100">
+                        <div class="card-body text-center">
+                            <i class="fas fa-eye fa-3x mb-3 text-primary"></i>
+                            <h3>Our Vision</h3>
+                            <p>To be the leading cooperative society in creating sustainable financial legacies and empowering generations through innovative financial solutions and community development.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Board Members -->
+    <section class="board-members py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Board of Directors</h2>
+            <div class="team-scroll-container">
+                <button class="scroll-nav prev" onclick="scrollTeam('board', 'prev')">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <div class="team-scroll-row" id="board-scroll">
+                    <div class="team-card">
+                        <img src="images/board-chairman.jpg" class="card-img-top" alt="Board Chairman">
+                        <div class="card-body text-center">
+                            <h4 class="card-title">John Doe</h4>
+                            <p class="text-primary">Chairman</p>
+                            <p class="card-text">20+ years of experience in financial management and cooperative leadership.</p>
+                        </div>
+                    </div>
+                    <div class="team-card">
+                        <img src="images/board-vice.jpg" class="card-img-top" alt="Vice Chairman">
+                        <div class="card-body text-center">
+                            <h4 class="card-title">Jane Smith</h4>
+                            <p class="text-primary">Vice Chairman</p>
+                            <p class="card-text">Expert in cooperative development and member relations.</p>
+                        </div>
+                    </div>
+                    <div class="team-card">
+                        <img src="images/board-secretary.jpg" class="card-img-top" alt="Board Secretary">
+                        <div class="card-body text-center">
+                            <h4 class="card-title">Michael Johnson</h4>
+                            <p class="text-primary">Secretary</p>
+                            <p class="card-text">Specialized in cooperative governance and strategic planning.</p>
+                        </div>
+                    </div>
+                    <div class="team-card">
+                        <img src="images/board-member1.jpg" class="card-img-top" alt="Board Member">
+                        <div class="card-body text-center">
+                            <h4 class="card-title">Sarah Wilson</h4>
+                            <p class="text-primary">Board Member</p>
+                            <p class="card-text">Financial expert with extensive experience in investment management.</p>
+                        </div>
+                    </div>
+                    <div class="team-card">
+                        <img src="images/board-member2.jpg" class="card-img-top" alt="Board Member">
+                        <div class="card-body text-center">
+                            <h4 class="card-title">David Thompson</h4>
+                            <p class="text-primary">Board Member</p>
+                            <p class="card-text">Strategic planning specialist with a focus on sustainable growth.</p>
+                        </div>
+                    </div>
+                    <div class="team-card">
+                        <img src="images/board-member3.jpg" class="card-img-top" alt="Board Member">
+                        <div class="card-body text-center">
+                            <h4 class="card-title">Emily Chen</h4>
+                            <p class="text-primary">Board Member</p>
+                            <p class="card-text">Risk management expert with a background in financial regulations.</p>
+                        </div>
+                    </div>
+                    <div class="team-card">
+                        <img src="images/board-member4.jpg" class="card-img-top" alt="Board Member">
+                        <div class="card-body text-center">
+                            <h4 class="card-title">James Wilson</h4>
+                            <p class="text-primary">Board Member</p>
+                            <p class="card-text">Community development specialist with a focus on member engagement.</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="scroll-nav next" onclick="scrollTeam('board', 'next')">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Management Team -->
+    <section class="management-team py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5">Management Team</h2>
+            <div class="team-scroll-container">
+                <button class="scroll-nav prev" onclick="scrollTeam('management', 'prev')">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <div class="team-scroll-row" id="management-scroll">
+                    <div class="team-card">
+                        <img src="images/ceo.jpg" class="card-img-top" alt="CEO">
+                        <div class="card-body text-center">
+                            <h4 class="card-title">Sarah Williams</h4>
+                            <p class="text-primary">Chief Executive Officer</p>
+                            <p class="card-text">Visionary leader with 15+ years of experience in cooperative management.</p>
+                        </div>
+                    </div>
+                    <div class="team-card">
+                        <img src="images/finance-manager.jpg" class="card-img-top" alt="Finance Manager">
+                        <div class="card-body text-center">
+                            <h4 class="card-title">David Brown</h4>
+                            <p class="text-primary">Finance Manager</p>
+                            <p class="card-text">Expert in financial planning and investment strategies.</p>
+                        </div>
+                    </div>
+                    <div class="team-card">
+                        <img src="images/operations-manager.jpg" class="card-img-top" alt="Operations Manager">
+                        <div class="card-body text-center">
+                            <h4 class="card-title">Lisa Chen</h4>
+                            <p class="text-primary">Operations Manager</p>
+                            <p class="card-text">Efficiency expert focused on optimizing organizational processes.</p>
+                        </div>
+                    </div>
+                    <div class="team-card">
+                        <img src="images/member-relations.jpg" class="card-img-top" alt="Member Relations">
+                        <div class="card-body text-center">
+                            <h4 class="card-title">Robert Taylor</h4>
+                            <p class="text-primary">Member Relations</p>
+                            <p class="card-text">Dedicated to enhancing member experience and satisfaction.</p>
+                        </div>
+                    </div>
+                    <div class="team-card">
+                        <img src="images/hr-manager.jpg" class="card-img-top" alt="HR Manager">
+                        <div class="card-body text-center">
+                            <h4 class="card-title">Maria Garcia</h4>
+                            <p class="text-primary">HR Manager</p>
+                            <p class="card-text">Talent development and organizational culture specialist.</p>
+                        </div>
+                    </div>
+                    <div class="team-card">
+                        <img src="images/it-manager.jpg" class="card-img-top" alt="IT Manager">
+                        <div class="card-body text-center">
+                            <h4 class="card-title">Alex Kumar</h4>
+                            <p class="text-primary">IT Manager</p>
+                            <p class="card-text">Digital transformation and technology innovation expert.</p>
+                        </div>
+                    </div>
+                    <div class="team-card">
+                        <img src="images/compliance-manager.jpg" class="card-img-top" alt="Compliance Manager">
+                        <div class="card-body text-center">
+                            <h4 class="card-title">Rachel Anderson</h4>
+                            <p class="text-primary">Compliance Manager</p>
+                            <p class="card-text">Ensuring regulatory compliance and risk management.</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="scroll-nav next" onclick="scrollTeam('management', 'next')">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Values Section -->
+    <section class="values-section py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Our Core Values</h2>
+            <div class="row g-4">
+                <div class="col-md-3 fade-in">
+                    <div class="card h-100">
+                        <div class="card-body text-center">
+                            <i class="fas fa-handshake fa-3x mb-3 text-primary"></i>
+                            <h4>Integrity</h4>
+                            <p>We conduct our business with honesty and transparency.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 fade-in">
+                    <div class="card h-100">
+                        <div class="card-body text-center">
+                            <i class="fas fa-users fa-3x mb-3 text-primary"></i>
+                            <h4>Community</h4>
+                            <p>We foster a sense of belonging and mutual support.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 fade-in">
+                    <div class="card h-100">
+                        <div class="card-body text-center">
+                            <i class="fas fa-chart-line fa-3x mb-3 text-primary"></i>
+                            <h4>Innovation</h4>
+                            <p>We continuously improve our services and solutions.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 fade-in">
+                    <div class="card h-100">
+                        <div class="card-body text-center">
+                            <i class="fas fa-star fa-3x mb-3 text-primary"></i>
+                            <h4>Excellence</h4>
+                            <p>We strive for the highest standards in everything we do.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Container -->
+    <div id="footer-container"></div>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Components JS -->
+    <script src="js/components.js"></script>
+    <!-- Custom JS -->
+    <script src="js/main.js"></script>
+    <script>
+        function scrollTeam(section, direction) {
+            const container = document.getElementById(`${section}-scroll`);
+            const scrollAmount = 320; // card width + gap
+            const scrollPosition = direction === 'next' 
+                ? container.scrollLeft + scrollAmount 
+                : container.scrollLeft - scrollAmount;
+            
+            container.scrollTo({
+                left: scrollPosition,
+                behavior: 'smooth'
+            });
+        }
+    </script>
+</body>
+</html> 

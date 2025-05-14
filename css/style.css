@@ -1,0 +1,513 @@
+/* Global Styles */
+:root {
+    --primary-color: #FF6B00;  /* Main orange */
+    --secondary-color: #FF8533; /* Lighter orange */
+    --accent-color: #FFA366;   /* Soft orange */
+    --light-color: #FFFFFF;    /* White */
+    --gray-light: #F8F9FA;     /* Light gray for subtle backgrounds */
+    --gray-medium: #E9ECEF;    /* Medium gray for borders */
+    --dark-color: #333333;     /* Dark gray */
+    --text-color: #495057;     /* Text color */
+    --white: #FFFFFF;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--light-color);
+}
+
+/* Navigation */
+.navbar {
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    padding: 1rem 0;
+    background-color: var(--white) !important;
+}
+
+.navbar-brand {
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: var(--primary-color) !important;
+}
+
+.nav-link {
+    font-weight: 500;
+    padding: 0.5rem 1rem !important;
+    transition: color 0.3s ease;
+    color: var(--dark-color) !important;
+}
+
+.nav-link:hover, .nav-link.active {
+    color: var(--primary-color) !important;
+}
+
+/* Hero Slider */
+.hero-slider {
+    height: 100vh;
+    margin-top: -76px; /* Adjust based on navbar height */
+}
+
+.hero-slide {
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.hero-slide::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.5);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    color: white;
+    padding-top: 40vh;
+    text-align: center;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.hero-content p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+}
+
+/* Quick Join Section */
+.quick-join {
+    padding: 5rem 0;
+}
+
+.card {
+    background-color: var(--light-color);
+    border: 1px solid var(--gray-medium);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.08);
+}
+
+.card-body {
+    padding: 2rem;
+}
+
+.card i {
+    color: var(--primary-color);
+}
+
+/* Buttons */
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    padding: 0.75rem 2rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: var(--secondary-color);
+    border-color: var(--secondary-color);
+    transform: translateY(-2px);
+}
+
+/* Footer */
+footer {
+    background-color: var(--dark-color);
+}
+
+footer h5 {
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
+
+footer a {
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: var(--primary-color) !important;
+}
+
+.social-links a {
+    transition: transform 0.3s ease;
+}
+
+.social-links a:hover {
+    transform: translateY(-3px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+    
+    .hero-content p {
+        font-size: 1.2rem;
+    }
+    
+    .hero-slider {
+        height: 70vh;
+    }
+    
+    .hero-slide {
+        height: 70vh;
+    }
+    
+    .hero-content {
+        padding-top: 30vh;
+    }
+}
+
+/* Swiper Customization */
+.swiper-button-next,
+.swiper-button-prev {
+    color: white !important;
+}
+
+.swiper-pagination-bullet {
+    background: white !important;
+}
+
+.swiper-pagination-bullet-active {
+    background: var(--primary-color) !important;
+}
+
+/* Utility Classes */
+.text-primary {
+    color: var(--primary-color) !important;
+}
+
+.bg-primary {
+    background-color: var(--primary-color) !important;
+}
+
+.bg-light {
+    background-color: var(--gray-light) !important;
+}
+
+/* Animation Classes */
+.fade-in {
+    animation: fadeIn 1s ease-in;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* About Page Styles */
+.page-header {
+    background-color: var(--light-color);
+    padding: 8rem 0 4rem;
+    margin-top: 76px;
+}
+
+.team-card {
+    overflow: hidden;
+    border: none;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(255, 107, 0, 0.15);
+}
+
+.team-card img {
+    height: 300px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.team-card:hover img {
+    transform: scale(1.05);
+}
+
+.team-card .card-body {
+    padding: 1.5rem;
+}
+
+.team-card .card-title {
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.team-card .text-primary {
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+.about-section img {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.about-section img:hover {
+    transform: scale(1.02);
+}
+
+.mission-vision .card {
+    border: none;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.mission-vision .card:hover {
+    transform: translateY(-5px);
+}
+
+.mission-vision .card i {
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+}
+
+.values-section .card {
+    border: none;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.values-section .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(255, 107, 0, 0.15);
+}
+
+.values-section .card i {
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+}
+
+/* Scrollable Team Sections */
+.team-scroll-container {
+    position: relative;
+    padding: 20px 0;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+    scrollbar-color: var(--bs-primary) #f8f9fa;
+}
+
+.team-scroll-container::-webkit-scrollbar {
+    height: 6px;
+}
+
+.team-scroll-container::-webkit-scrollbar-track {
+    background: #f8f9fa;
+    border-radius: 3px;
+}
+
+.team-scroll-container::-webkit-scrollbar-thumb {
+    background-color: var(--bs-primary);
+    border-radius: 3px;
+}
+
+.team-scroll-row {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 1.5rem;
+    padding: 10px 5px;
+    min-width: min-content;
+}
+
+.team-card {
+    flex: 0 0 auto;
+    width: 300px;
+    transition: transform 0.3s ease;
+}
+
+.team-card:hover {
+    transform: translateY(-5px);
+}
+
+.team-card .card-img-top {
+    height: 300px;
+    object-fit: cover;
+}
+
+/* Scroll Navigation Buttons */
+.scroll-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    background: var(--bs-primary);
+    border: none;
+    border-radius: 50%;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 2;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+.scroll-nav:hover {
+    opacity: 1;
+}
+
+.scroll-nav.prev {
+    left: 10px;
+}
+
+.scroll-nav.next {
+    right: 10px;
+}
+
+@media (max-width: 768px) {
+    .scroll-nav {
+        display: none;
+    }
+}
+
+/* Update section backgrounds */
+.about-section, 
+.services-section,
+.projects-section,
+.events-section,
+.gallery-section,
+.media-section,
+.contact-section {
+    background-color: var(--light-color);
+    padding: 5rem 0;
+}
+
+.about-section:nth-child(even),
+.services-section:nth-child(even),
+.projects-section:nth-child(even),
+.events-section:nth-child(even),
+.gallery-section:nth-child(even),
+.media-section:nth-child(even) {
+    background-color: var(--gray-light);
+}
+
+/* Project Filter Buttons */
+.btn-outline-primary {
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+    background-color: transparent;
+}
+
+.btn-outline-primary:hover,
+.btn-outline-primary:focus,
+.btn-outline-primary:active,
+.btn-outline-primary.active {
+    color: var(--primary-color);
+    background-color: transparent;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.25rem rgba(var(--primary-rgb), 0.25);
+}
+
+.btn-outline-primary.active {
+    font-weight: 600;
+    border-width: 2px;
+}
+
+/* Calendar Customization */
+.fc {
+    background-color: var(--light-color);
+}
+
+/* Calendar Header */
+.fc .fc-toolbar-title {
+    color: var(--dark-color);
+    font-weight: 600;
+}
+
+/* Calendar Grid */
+.fc .fc-daygrid-day {
+    background-color: var(--light-color);
+}
+
+.fc .fc-daygrid-day-number {
+    color: var(--dark-color);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+/* Today's Date Highlight */
+.fc .fc-day-today {
+    background-color: rgba(255, 107, 0, 0.1) !important;
+}
+
+.fc .fc-day-today .fc-daygrid-day-number {
+    color: var(--primary-color) !important;
+    font-weight: 600;
+}
+
+/* Event Colors */
+.fc-event {
+    border: none !important;
+    padding: 2px 4px;
+}
+
+.fc-event.meeting {
+    background-color: var(--primary-color) !important;
+    border-color: var(--primary-color) !important;
+}
+
+.fc-event.workshop {
+    background-color: var(--accent-color) !important;
+    border-color: var(--accent-color) !important;
+}
+
+.fc-event.launch {
+    background-color: var(--secondary-color) !important;
+    border-color: var(--secondary-color) !important;
+}
+
+.fc-event.training {
+    background-color: var(--accent-color) !important;
+    border-color: var(--accent-color) !important;
+}
+
+.fc-event.special {
+    background-color: var(--accent-color) !important;
+    border-color: var(--accent-color) !important;
+}
+
+.fc-event-title {
+    font-weight: 500;
+    color: var(--light-color);
+}
+
+/* Calendar Navigation */
+.fc .fc-prev-button,
+.fc .fc-next-button {
+    background-color: var(--primary-color) !important;
+    border-color: var(--primary-color) !important;
+}
+
+.fc .fc-prev-button:hover,
+.fc .fc-next-button:hover {
+    background-color: var(--secondary-color) !important;
+    border-color: var(--secondary-color) !important;
+} 

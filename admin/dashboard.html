@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - MCS Cooperative Society</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        :root {
+            --admin-primary: #FF6B35;  /* Main orange color */
+            --admin-primary-light: #FFE4D9;  /* Light orange background */
+            --admin-primary-hover: #FF8B5E;  /* Hover state orange */
+            --admin-sidebar-bg: #FFF5F2;  /* Very light orange for sidebar */
+            --admin-sidebar-text: #4A4A4A;  /* Dark gray for text */
+            --admin-card-bg: #FFFFFF;  /* White for cards */
+            --admin-border: #FFD4C7;  /* Light orange for borders */
+        }
+
+        .admin-sidebar {
+            min-height: 100vh;
+            background-color: var(--admin-sidebar-bg);
+            padding-top: 1rem;
+            border-right: 1px solid var(--admin-border);
+        }
+        .admin-sidebar .nav-link {
+            color: var(--admin-sidebar-text);
+            padding: 0.8rem 1rem;
+            border-radius: 0.25rem;
+            margin: 0.2rem 0;
+            transition: all 0.3s ease;
+        }
+        .admin-sidebar .nav-link:hover,
+        .admin-sidebar .nav-link.active {
+            color: var(--admin-primary);
+            background-color: var(--admin-primary-light);
+        }
+        .admin-sidebar .nav-link i {
+            width: 1.5rem;
+            text-align: center;
+            margin-right: 0.5rem;
+            color: var(--admin-primary);
+        }
+        .admin-content {
+            padding: 2rem;
+            background-color: var(--admin-primary-light);
+        }
+        .admin-header {
+            background-color: var(--admin-card-bg);
+            border-bottom: 1px solid var(--admin-border);
+            padding: 1rem 2rem;
+        }
+        .content-card {
+            background-color: var(--admin-card-bg);
+            border-radius: 0.5rem;
+            box-shadow: 0 2px 4px rgba(255,107,53,0.1);
+            margin-bottom: 1.5rem;
+            border: 1px solid var(--admin-border);
+        }
+        .btn-primary {
+            background-color: var(--admin-primary);
+            border-color: var(--admin-primary);
+        }
+        .btn-primary:hover {
+            background-color: var(--admin-primary-hover);
+            border-color: var(--admin-primary-hover);
+        }
+        .btn-outline-primary {
+            color: var(--admin-primary);
+            border-color: var(--admin-primary);
+        }
+        .btn-outline-primary:hover {
+            background-color: var(--admin-primary);
+            border-color: var(--admin-primary);
+            color: white;
+        }
+        .dropdown-item:active {
+            background-color: var(--admin-primary);
+        }
+        .badge.bg-success {
+            background-color: var(--admin-primary) !important;
+        }
+        .text-success {
+            color: var(--admin-primary) !important;
+        }
+        .table th {
+            color: var(--admin-primary);
+            border-bottom-color: var(--admin-border);
+        }
+        .table td {
+            border-bottom-color: var(--admin-border);
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Sidebar -->
+            <div class="col-md-3 col-lg-2 admin-sidebar">
+                <div class="d-flex align-items-center justify-content-center mb-4">
+                    <img src="../images/logo.png" alt="MCS Logo" class="img-fluid" style="max-width: 120px;">
+                </div>
+                <nav class="nav flex-column px-2">
+                    <a class="nav-link active" href="#" data-section="dashboard">
+                        <i class="fas fa-tachometer-alt"></i>Dashboard
+                    </a>
+                    <a class="nav-link" href="#" data-section="pages">
+                        <i class="fas fa-file-alt"></i>Pages
+                    </a>
+                    <a class="nav-link" href="#" data-section="services">
+                        <i class="fas fa-cogs"></i>Services
+                    </a>
+                    <a class="nav-link" href="#" data-section="projects">
+                        <i class="fas fa-project-diagram"></i>Projects
+                    </a>
+                    <a class="nav-link" href="#" data-section="events">
+                        <i class="fas fa-calendar-alt"></i>Events
+                    </a>
+                    <a class="nav-link" href="#" data-section="gallery">
+                        <i class="fas fa-images"></i>Gallery
+                    </a>
+                    <a class="nav-link" href="#" data-section="team">
+                        <i class="fas fa-users"></i>Team
+                    </a>
+                    <a class="nav-link" href="#" data-section="media">
+                        <i class="fas fa-newspaper"></i>Media
+                    </a>
+                    <a class="nav-link" href="#" data-section="settings">
+                        <i class="fas fa-cog"></i>Settings
+                    </a>
+                    <hr class="text-light opacity-25 my-3">
+                    <a class="nav-link text-danger" href="index.html">
+                        <i class="fas fa-sign-out-alt"></i>Logout
+                    </a>
+                </nav>
+            </div>
+
+            <!-- Main Content -->
+            <div class="col-md-9 col-lg-10">
+                <!-- Header -->
+                <header class="admin-header d-flex justify-content-between align-items-center">
+                    <h1 class="h4 mb-0">Dashboard</h1>
+                    <div class="d-flex align-items-center">
+                        <div class="dropdown">
+                            <button class="btn btn-link text-dark dropdown-toggle" type="button" id="userDropdown" data-bs-toggle="dropdown">
+                                <i class="fas fa-user-circle me-2"></i>Admin User
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-end">
+                                <li><a class="dropdown-item" href="#"><i class="fas fa-user me-2"></i>Profile</a></li>
+                                <li><a class="dropdown-item" href="#"><i class="fas fa-cog me-2"></i>Settings</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item text-danger" href="index.html"><i class="fas fa-sign-out-alt me-2"></i>Logout</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </header>
+
+                <!-- Content Area -->
+                <main class="admin-content">
+                    <!-- Dashboard Overview -->
+                    <div class="row mb-4">
+                        <div class="col-md-3">
+                            <div class="content-card p-3">
+                                <h6 class="text-muted mb-2">Total Members</h6>
+                                <h3 class="mb-0">1,234</h3>
+                                <small class="text-success"><i class="fas fa-arrow-up"></i> 12% increase</small>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="content-card p-3">
+                                <h6 class="text-muted mb-2">Active Projects</h6>
+                                <h3 class="mb-0">8</h3>
+                                <small class="text-primary">3 in progress</small>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="content-card p-3">
+                                <h6 class="text-muted mb-2">Upcoming Events</h6>
+                                <h3 class="mb-0">5</h3>
+                                <small class="text-warning">Next event in 3 days</small>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="content-card p-3">
+                                <h6 class="text-muted mb-2">New Inquiries</h6>
+                                <h3 class="mb-0">23</h3>
+                                <small class="text-danger">12 unread</small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Recent Activity -->
+                    <div class="content-card p-4">
+                        <h5 class="mb-4">Recent Activity</h5>
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>Activity</th>
+                                        <th>User</th>
+                                        <th>Date</th>
+                                        <th>Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Updated Services Page</td>
+                                        <td>Admin User</td>
+                                        <td>2024-03-15</td>
+                                        <td><span class="badge bg-success">Completed</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Added New Project</td>
+                                        <td>Admin User</td>
+                                        <td>2024-03-14</td>
+                                        <td><span class="badge bg-success">Completed</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Updated Team Members</td>
+                                        <td>Admin User</td>
+                                        <td>2024-03-13</td>
+                                        <td><span class="badge bg-success">Completed</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </main>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Navigation handling
+            const navLinks = document.querySelectorAll('.nav-link[data-section]');
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    // Remove active class from all links
+                    navLinks.forEach(l => l.classList.remove('active'));
+                    // Add active class to clicked link
+                    this.classList.add('active');
+                    // Update header title
+                    document.querySelector('.admin-header h1').textContent = this.textContent.trim();
+                    // Here you would typically load the corresponding section content
+                });
+            });
+        });
+    </script>
+</body>
+</html> 

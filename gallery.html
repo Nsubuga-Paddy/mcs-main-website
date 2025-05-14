@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - MCS Cooperative Society</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Lightbox CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navigation Container -->
+    <div id="navbar-container"></div>
+
+    <!-- Page Header -->
+    <header class="page-header bg-light py-5 mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <h1 class="display-4 fw-bold text-primary">Our Gallery</h1>
+                    <p class="lead">Explore our projects, events, and achievements through images</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Gallery Section -->
+    <section class="gallery-section">
+        <div class="container">
+            <!-- Gallery Filter -->
+            <div class="row mb-4">
+                <div class="col-12">
+                    <div class="d-flex justify-content-center flex-wrap gap-2">
+                        <button class="btn btn-outline-primary active" data-filter="all">All</button>
+                        <button class="btn btn-outline-primary" data-filter="projects">Projects</button>
+                        <button class="btn btn-outline-primary" data-filter="events">Events</button>
+                        <button class="btn btn-outline-primary" data-filter="facilities">Facilities</button>
+                        <button class="btn btn-outline-primary" data-filter="community">Community</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Gallery Grid -->
+            <div class="row g-4" id="gallery-grid">
+                <!-- Project Images -->
+                <div class="col-md-6 col-lg-4 gallery-item" data-category="projects">
+                    <a href="images/gallery/project1.jpg" data-lightbox="gallery" data-title="MCS Luxury Condominiums">
+                        <div class="card gallery-card">
+                            <img src="images/gallery/project1.jpg" class="card-img-top" alt="MCS Luxury Condominiums">
+                            <div class="card-body">
+                                <h5 class="card-title">MCS Luxury Condominiums</h5>
+                                <p class="card-text">Modern living spaces with premium amenities</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-md-6 col-lg-4 gallery-item" data-category="projects">
+                    <a href="images/gallery/project2.jpg" data-lightbox="gallery" data-title="MCS Secure Living">
+                        <div class="card gallery-card">
+                            <img src="images/gallery/project2.jpg" class="card-img-top" alt="MCS Secure Living">
+                            <div class="card-body">
+                                <h5 class="card-title">MCS Secure Living</h5>
+                                <p class="card-text">Gated community with 24/7 security</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Event Images -->
+                <div class="col-md-6 col-lg-4 gallery-item" data-category="events">
+                    <a href="images/gallery/event1.jpg" data-lightbox="gallery" data-title="Annual General Meeting 2024">
+                        <div class="card gallery-card">
+                            <img src="images/gallery/event1.jpg" class="card-img-top" alt="Annual General Meeting">
+                            <div class="card-body">
+                                <h5 class="card-title">Annual General Meeting 2024</h5>
+                                <p class="card-text">Members gathering for annual review</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Facility Images -->
+                <div class="col-md-6 col-lg-4 gallery-item" data-category="facilities">
+                    <a href="images/gallery/facility1.jpg" data-lightbox="gallery" data-title="MCS Training Center">
+                        <div class="card gallery-card">
+                            <img src="images/gallery/facility1.jpg" class="card-img-top" alt="MCS Training Center">
+                            <div class="card-body">
+                                <h5 class="card-title">MCS Training Center</h5>
+                                <p class="card-text">State-of-the-art training facilities</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Community Images -->
+                <div class="col-md-6 col-lg-4 gallery-item" data-category="community">
+                    <a href="images/gallery/community1.jpg" data-lightbox="gallery" data-title="Community Outreach">
+                        <div class="card gallery-card">
+                            <img src="images/gallery/community1.jpg" class="card-img-top" alt="Community Outreach">
+                            <div class="card-body">
+                                <h5 class="card-title">Community Outreach</h5>
+                                <p class="card-text">Supporting local community initiatives</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Add more gallery items as needed -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Container -->
+    <div id="footer-container"></div>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Lightbox JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+    <!-- Components JS -->
+    <script src="js/components.js"></script>
+    <!-- Custom JS -->
+    <script src="js/main.js"></script>
+    <script>
+        // Gallery Filter Functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterButtons = document.querySelectorAll('[data-filter]');
+            const galleryItems = document.querySelectorAll('.gallery-item');
+
+            filterButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    // Update active button
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    button.classList.add('active');
+
+                    // Filter gallery items
+                    const filter = button.getAttribute('data-filter');
+                    galleryItems.forEach(item => {
+                        if (filter === 'all' || item.getAttribute('data-category') === filter) {
+                            item.style.display = 'block';
+                        } else {
+                            item.style.display = 'none';
+                        }
+                    });
+                });
+            });
+
+            // Lightbox Configuration
+            lightbox.option({
+                'resizeDuration': 200,
+                'wrapAround': true,
+                'albumLabel': 'Image %1 of %2'
+            });
+        });
+    </script>
+</body>
+</html> 

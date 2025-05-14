@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events - MCS Cooperative Society</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- FullCalendar CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navigation Container -->
+    <div id="navbar-container"></div>
+
+    <!-- Page Header -->
+    <header class="page-header bg-light py-5 mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <h1 class="display-4 fw-bold text-primary">Events Calendar</h1>
+                    <p class="lead">Stay Updated with MCS Events and Activities</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Events Calendar Section -->
+    <section class="events-section">
+        <div class="container">
+            <div class="row">
+                <!-- Calendar -->
+                <div class="col-lg-8 mb-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <div id="calendar"></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Upcoming Events -->
+                <div class="col-lg-4">
+                    <div class="card">
+                        <div class="card-header bg-white">
+                            <h3 class="h5 mb-0">Upcoming Events</h3>
+                        </div>
+                        <div class="card-body p-0">
+                            <div class="list-group list-group-flush">
+                                <!-- Event 1 -->
+                                <div class="list-group-item">
+                                    <div class="d-flex w-100 justify-content-between">
+                                        <h5 class="mb-1">Annual General Meeting</h5>
+                                        <small class="text-primary">Mar 15, 2024</small>
+                                    </div>
+                                    <p class="mb-1">Join us for our annual general meeting to discuss our progress and future plans.</p>
+                                    <small><i class="fas fa-map-marker-alt text-primary me-2"></i>MCS Head Office</small>
+                                </div>
+                                <!-- Event 2 -->
+                                <div class="list-group-item">
+                                    <div class="d-flex w-100 justify-content-between">
+                                        <h5 class="mb-1">Financial Literacy Workshop</h5>
+                                        <small class="text-primary">Mar 20, 2024</small>
+                                    </div>
+                                    <p class="mb-1">Learn essential financial management skills and investment strategies.</p>
+                                    <small><i class="fas fa-map-marker-alt text-primary me-2"></i>MCS Training Center</small>
+                                </div>
+                                <!-- Event 3 -->
+                                <div class="list-group-item">
+                                    <div class="d-flex w-100 justify-content-between">
+                                        <h5 class="mb-1">Housing Project Launch</h5>
+                                        <small class="text-primary">Apr 5, 2024</small>
+                                    </div>
+                                    <p class="mb-1">Official launch of our new affordable housing project.</p>
+                                    <small><i class="fas fa-map-marker-alt text-primary me-2"></i>MCS Housing Estate</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Event Categories -->
+                    <div class="card mt-4">
+                        <div class="card-header bg-white">
+                            <h3 class="h5 mb-0">Event Categories</h3>
+                        </div>
+                        <div class="card-body">
+                            <div class="d-flex flex-wrap gap-2">
+                                <span class="badge bg-primary">Meetings</span>
+                                <span class="badge bg-success">Workshops</span>
+                                <span class="badge bg-info">Launches</span>
+                                <span class="badge bg-warning">Training</span>
+                                <span class="badge bg-danger">Special Events</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Events -->
+    <section class="events-section bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5">Featured Events</h2>
+            <div class="row g-4">
+                <!-- Featured Event 1 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100">
+                        <img src="images/events/agm.jpg" class="card-img-top" alt="Annual General Meeting">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                <span class="badge bg-primary">Meeting</span>
+                                <small class="text-muted">March 15, 2024</small>
+                            </div>
+                            <h3 class="card-title h5">Annual General Meeting</h3>
+                            <p class="card-text">Join us for our annual general meeting where we'll review our achievements and discuss future plans.</p>
+                            <ul class="list-unstyled">
+                                <li><i class="fas fa-clock text-primary me-2"></i>9:00 AM - 2:00 PM</li>
+                                <li><i class="fas fa-map-marker-alt text-primary me-2"></i>MCS Head Office</li>
+                                <li><i class="fas fa-users text-primary me-2"></i>All Members Welcome</li>
+                            </ul>
+                        </div>
+                        <div class="card-footer bg-white border-top-0">
+                            <a href="#" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#eventModal1">View Details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Featured Event 2 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100">
+                        <img src="images/events/workshop.jpg" class="card-img-top" alt="Financial Workshop">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                <span class="badge bg-success">Workshop</span>
+                                <small class="text-muted">March 20, 2024</small>
+                            </div>
+                            <h3 class="card-title h5">Financial Literacy Workshop</h3>
+                            <p class="card-text">Enhance your financial knowledge with our comprehensive workshop on personal finance and investment.</p>
+                            <ul class="list-unstyled">
+                                <li><i class="fas fa-clock text-primary me-2"></i>10:00 AM - 4:00 PM</li>
+                                <li><i class="fas fa-map-marker-alt text-primary me-2"></i>MCS Training Center</li>
+                                <li><i class="fas fa-user-graduate text-primary me-2"></i>Limited to 30 Participants</li>
+                            </ul>
+                        </div>
+                        <div class="card-footer bg-white border-top-0">
+                            <a href="#" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#eventModal2">View Details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Featured Event 3 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100">
+                        <img src="images/events/launch.jpg" class="card-img-top" alt="Project Launch">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                <span class="badge bg-info">Launch</span>
+                                <small class="text-muted">April 5, 2024</small>
+                            </div>
+                            <h3 class="card-title h5">Housing Project Launch</h3>
+                            <p class="card-text">Be among the first to see our new affordable housing project and learn about investment opportunities.</p>
+                            <ul class="list-unstyled">
+                                <li><i class="fas fa-clock text-primary me-2"></i>2:00 PM - 6:00 PM</li>
+                                <li><i class="fas fa-map-marker-alt text-primary me-2"></i>MCS Housing Estate</li>
+                                <li><i class="fas fa-ticket-alt text-primary me-2"></i>Registration Required</li>
+                            </ul>
+                        </div>
+                        <div class="card-footer bg-white border-top-0">
+                            <a href="#" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#eventModal3">View Details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Event Registration CTA -->
+    <section class="events-section bg-primary text-white text-center">
+        <div class="container">
+            <h2 class="mb-4">Want to Stay Updated?</h2>
+            <p class="lead mb-4">Subscribe to our newsletter to receive updates about upcoming events.</p>
+            <form class="row justify-content-center">
+                <div class="col-md-6">
+                    <div class="input-group">
+                        <input type="email" class="form-control" placeholder="Enter your email">
+                        <button class="btn btn-light" type="submit">Subscribe</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Event Modals -->
+    <!-- Modal 1 -->
+    <div class="modal fade" id="eventModal1" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Annual General Meeting</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="images/events/agm.jpg" class="img-fluid rounded mb-4" alt="Annual General Meeting">
+                    <h4>Event Details</h4>
+                    <p>Join us for our annual general meeting where we'll review our achievements, discuss future plans, and elect new board members.</p>
+                    <div class="row mt-4">
+                        <div class="col-md-6">
+                            <h5>Agenda</h5>
+                            <ul class="list-unstyled">
+                                <li><i class="fas fa-check text-primary me-2"></i>Welcome Address</li>
+                                <li><i class="fas fa-check text-primary me-2"></i>Annual Report</li>
+                                <li><i class="fas fa-check text-primary me-2"></i>Financial Review</li>
+                                <li><i class="fas fa-check text-primary me-2"></i>Board Elections</li>
+                                <li><i class="fas fa-check text-primary me-2"></i>Q&A Session</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                            <h5>Additional Information</h5>
+                            <ul class="list-unstyled">
+                                <li><i class="fas fa-clock text-primary me-2"></i>Duration: 5 hours</li>
+                                <li><i class="fas fa-utensils text-primary me-2"></i>Lunch Provided</li>
+                                <li><i class="fas fa-parking text-primary me-2"></i>Free Parking</li>
+                                <li><i class="fas fa-sign-language text-primary me-2"></i>Sign Language Available</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <a href="#" class="btn btn-primary">Register Now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Add more modals for other events -->
+
+    <!-- Footer Container -->
+    <div id="footer-container"></div>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- FullCalendar JS -->
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.js"></script>
+    <!-- Components JS -->
+    <script src="js/components.js"></script>
+    <!-- Custom JS -->
+    <script src="js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var calendarEl = document.getElementById('calendar');
+            var calendar = new FullCalendar.Calendar(calendarEl, {
+                initialView: 'dayGridMonth',
+                headerToolbar: {
+                    left: 'prev,next today',
+                    center: 'title',
+                    right: 'dayGridMonth,timeGridWeek,timeGridDay'
+                },
+                events: [
+                    {
+                        title: 'Annual General Meeting',
+                        start: '2024-03-15',
+                        className: 'bg-primary'
+                    },
+                    {
+                        title: 'Financial Literacy Workshop',
+                        start: '2024-03-20',
+                        className: 'bg-success'
+                    },
+                    {
+                        title: 'Housing Project Launch',
+                        start: '2024-04-05',
+                        className: 'bg-info'
+                    }
+                ],
+                eventClick: function(info) {
+                    // Handle event click
+                    const eventModal = document.querySelector(`[data-bs-target="#eventModal${info.event.id}"]`);
+                    if (eventModal) {
+                        eventModal.click();
+                    }
+                }
+            });
+            calendar.render();
+        });
+    </script>
+</body>
+</html> 
