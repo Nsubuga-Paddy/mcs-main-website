@@ -25,7 +25,7 @@ const navbarHTML = `
 <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
     <div class="container">
         <a class="navbar-brand" href="index.html">
-            <img src="images/logo.png" alt="MCS Logo" height="50">
+            <img src="images/mcs-logo.png" alt="MCS Logo" height="50">
             <span class="ms-2">MCS</span>
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -78,9 +78,9 @@ const footerHTML = `
             <div class="col-md-4">
                 <h5>Contact Us</h5>
                 <p>
-                    <i class="fas fa-phone me-2"></i> Phone: [Your Phone]<br>
-                    <i class="fas fa-envelope me-2"></i> Email: [Your Email]<br>
-                    <i class="fas fa-location-dot me-2"></i> Address: [Your Address]
+                    <i class="fas fa-phone me-2"></i> Phone: +256 783313043<br>
+                    <i class="fas fa-envelope me-2"></i> Email: mushanapp@gmail.com<br>
+                    <i class="fas fa-location-dot me-2"></i> Address: Kisaasi-Kyanja Road, Kampala, Uganda
                 </p>
             </div>
             <div class="col-md-4">
@@ -95,16 +95,15 @@ const footerHTML = `
             <div class="col-md-4">
                 <h5>Follow Us</h5>
                 <div class="social-links">
-                    <a href="#" class="text-light me-2"><i class="fab fa-facebook fa-2x"></i></a>
-                    <a href="#" class="text-light me-2"><i class="fab fa-twitter fa-2x"></i></a>
-                    <a href="#" class="text-light me-2"><i class="fab fa-instagram fa-2x"></i></a>
-                    <a href="#" class="text-light"><i class="fab fa-linkedin fa-2x"></i></a>
+                    <a href="https://www.facebook.com/share/1Fb4nU4NWD/" class="text-light me-2"><i class="fab fa-facebook fa-2x"></i></a>
+                    <a href="http://www.youtube.com/@mushanaapp2558" class="text-light me-2"><i class="fab fa-youtube fa-2x"></i></a>
+                    <a href="https://vm.tiktok.com/ZMHbDW1JvuhTg-a7qVs/" class="text-light me-2"><i class="fab fa-tiktok fa-2x"></i></a>
                 </div>
             </div>
         </div>
         <hr class="my-4">
         <div class="text-center">
-            <p class="mb-0">&copy; 2024 MCS Cooperative Society. All rights reserved.</p>
+            <p class="mb-0">&copy; 2024 Mushana Multipurpose Cooperative Society. All rights reserved.</p>
         </div>
     </div>
 </footer>`;
